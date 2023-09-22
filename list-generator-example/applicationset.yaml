@@ -26,4 +26,10 @@ spec:
         server: https://kubernetes.default.svc
         # will deploy to different namespaces as different destinations 
         namespace: '{{namespace}}'
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=true
 
